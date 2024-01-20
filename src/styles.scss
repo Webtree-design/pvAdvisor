@@ -38,6 +38,9 @@ $harley-theme: mat.define-light-theme(
 @tailwind components;
 @tailwind utilities;
 
+// REMOVE
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Rubik+Glitch&display=swap');
+
 /* You can add global styles to this file, and also import other style files */
 
 html,
@@ -48,3 +51,48 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+:root {
+  --shortTransition: 0.3s;
+  --longTransition: 0.6s;
+
+  // --accent: #9AC0D4;
+  // --second: #28408b;
+  --accent: #28408b;
+  --second: #9ac0d4;
+
+  --accent-X: #28408b90;
+  --second-X: #9ac0d490;
+
+  --background: #646464;
+}
+
+// start region scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: var(--background);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  transition: var(--shortTransition);
+  // box-shadow: inset 0 0 5px rgb(255, 255, 255, 0.4);
+
+  border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  transition: var(--shortTransition);
+  background: var(--accent-X);
+
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  transition: var(--shortTransition);
+  background: var(--accent);
+}
+// end region scrollbar

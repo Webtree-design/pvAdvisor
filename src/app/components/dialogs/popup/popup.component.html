@@ -1,0 +1,18 @@
+<section [@fadeInOut] class="p-6 rounded-lg shadown-lg">
+  <h1 style="font-size: larger; line-height: 1" mat-dialog-title>
+    {{ item.title }}
+  </h1>
+  <div class="dialogbox" mat-dialog-content>
+    <div>{{ item.content }}</div>
+  </div>
+  <div class="flex justify-center items-center p-6 pb-0">
+    <button
+      class="dialogboxbutton"
+      (click)="dialogRef.close()"
+      mat-button
+      mat-dialog-close
+    >
+      Schließen
+    </button>
+  </div>
+</section>

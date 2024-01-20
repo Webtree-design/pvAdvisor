@@ -1,0 +1,16 @@
+.toolbar-ul {
+  // white-space: nowrap;
+  li {
+    a {
+      font-family: "Anton", sans-serif;
+      cursor: pointer;
+      font-size: 21px;
+      transition: 0.1s;
+      font-weight: 800;
+    }
+  }
+}
+
+.router-outlet {
+  background-color: var(--background);
+}
