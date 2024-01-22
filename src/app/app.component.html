@@ -10,7 +10,7 @@
     class="w-[320px] h-screen"
     mode="over"
     position="end"
-    style="position: fixed;background-color: var(--toolbar)"
+    style="position: fixed; background-color: var(--toolbar)"
   >
     <div class="py-1 flex justify-center">
       <button
@@ -25,28 +25,39 @@
     <ul class="toolbar-ul flex flex-col py-0 p-4">
       <li class="my-[8px]">
         <a
-          (click)="scroll(section1); drawer.close()"
+          (click)="drawer.close()"
+          routerLink="start"
           class="startroute block rounded"
           >Start</a
         >
       </li>
       <mat-divider></mat-divider>
       <li class="my-[8px]">
-        <a (click)="scroll(section2); drawer.close()" class="block rounded"
+        <a (click)="drawer.close()" routerLink="ueberuns" class="block rounded"
           >Über uns
         </a>
       </li>
       <mat-divider></mat-divider>
       <li class="my-[8px]">
         <a
-          (click)="scroll(section3); drawer.close()"
+          (click)="drawer.close()"
+          routerLink="konfigurator"
+          class="block rounded"
+          >Konfigurator
+        </a>
+      </li>
+      <mat-divider></mat-divider>
+      <li class="my-[8px]">
+        <a
+          (click)="drawer.close()"
+          routerLink="neuigkeiten"
           class="aboutroute block rounded"
-          >Katalog</a
+          >Neuigkeiten</a
         >
       </li>
       <mat-divider></mat-divider>
       <li class="my-[8px]">
-        <a (click)="scroll(section4); drawer.close()" class="block rounded"
+        <a (click)="drawer.close()" routerLink="kontakt" class="block rounded"
           >Kontakt
         </a>
       </li>
@@ -66,22 +77,29 @@
     <div
       class="w-[100%] flex flex-row justify-between mx-auto max-w-screen-xl px-3 py-3"
     >
-      <div class="cursor-pointer" (click)="scroll(section1)">
-        <img style="height: 70px" src="../assets/logo_img.png" alt="pvAdvisor" />
+      <div class="cursor-pointer">
+        <img
+          style="height: 70px"
+          src="../assets/logo_img.png"
+          alt="pvAdvisor"
+        />
       </div>
 
       <ul class="toolbar-ul gap-x-12 flex flex-row items-center justify-center">
         <li>
-          <a (click)="scroll(section1)" class="block rounded">Start</a>
+          <a routerLink="start" class="block rounded">Start</a>
         </li>
         <li>
-          <a (click)="scroll(section2)" class="block rounded">Über uns</a>
+          <a routerLink="ueberuns" class="block rounded">Über uns</a>
         </li>
         <li>
-          <a (click)="scroll(section3)" class="block rounded">Katalog</a>
+          <a routerLink="konfigurator" class="block rounded">Konfigurator</a>
         </li>
         <li>
-          <a (click)="scroll(section4)" class="block rounded">Kontakt</a>
+          <a routerLink="neuigkeiten" class="block rounded">Neuigkeiten</a>
+        </li>
+        <li>
+          <a routerLink="kontakt" class="block rounded">Kontakt</a>
         </li>
       </ul>
     </div>
@@ -93,7 +111,7 @@
     class="fixed flex justify-between items-center md:hidden w-[100%] h-[90px] px-6"
     style="z-index: 100"
   >
-    <div class="cursor-pointer" (click)="scroll(section1)">
+    <div class="cursor-pointer">
       <img style="height: 70px" src="../assets/logo_img.png" alt="pvAdvisor" />
     </div>
     <button (click)="drawer.toggle()">
@@ -111,23 +129,12 @@
   </div>
 
   <div #routerOutlet class="router-outlet">
-    <div #section1>
-      <app-start></app-start>
-    </div>
-    <div #section2>
-      <app-ueberuns></app-ueberuns>
-    </div>
-    <div class="banner"></div>
-    <div #section3>
-      <app-news></app-news>
-    </div>
-    <div #section4>
-      <app-kontakt></app-kontakt>
-    </div>
+    <router-outlet></router-outlet>
   </div>
 
   <footer
-    class="p-4 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 flex flex-col" style="background-color: var(--toolbar);"
+    class="p-4 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 flex flex-col"
+    style="background-color: var(--toolbar)"
   >
     <div
       class="mb-6 contentblock-one container mx-auto flex flex-col text-center items-center"

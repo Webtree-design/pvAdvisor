@@ -25,6 +25,7 @@ import { UeberunsComponent } from './components/ueberuns/ueberuns.component';
 import { PopupComponent } from './components/dialogs/popup/popup.component';
 import { NewsComponent } from './components/news/news.component';
 import { KontaktComponent } from './components/kontakt/kontakt.component';
+import { KonfiguratorComponent } from './components/konfigurator/konfigurator.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
     UeberunsComponent,
     PopupComponent,
     NewsComponent,
-    KontaktComponent
+    KontaktComponent,
+    KonfiguratorComponent
   ],
   imports: [
     BrowserModule, //.withServerTransition({ appId: 'serverApp' }),
