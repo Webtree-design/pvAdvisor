@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { env } from '../../env';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -21,13 +22,13 @@ export class DataService {
     }
   }
 
-  public getNews() {
+  public getNews():Observable<any> {
     const user = env.user;
     return this.http.get<any>(`${env.apiURL}/newsOpen/get/:${user}`, {
       headers: this.headers,
     });
   }
-  public getMessage() {
+  public getMessage():Observable<any> {
     const user = env.user;
     console.log(user)
     return this.http.get<any>(`${env.apiURL}/messageOpen/get/:${user}`, {
