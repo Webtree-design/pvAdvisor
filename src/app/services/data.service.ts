@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { env } from '../../env';
 import { Observable } from 'rxjs';
@@ -7,12 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
   private headers: any;
+  private params: any;
+  private user: any = env.user;
 
   constructor(private http: HttpClient) {
     this.setHeader();
   }
 
-  setHeader() {
+  async setHeader() {
     try {
       this.headers = new HttpHeaders({
         'Content-Type': 'application/json',
@@ -22,15 +24,15 @@ export class DataService {
     }
   }
 
-  public getNews():Observable<any> {
+  public getNews(): Observable<any> {
     const user = env.user;
     return this.http.get<any>(`${env.apiURL}/newsOpen/get/:${user}`, {
       headers: this.headers,
     });
   }
-  public getMessage():Observable<any> {
+
+  public getMessage(): Observable<any> {
     const user = env.user;
-    console.log(user)
     return this.http.get<any>(`${env.apiURL}/messageOpen/get/:${user}`, {
       headers: this.headers,
     });
