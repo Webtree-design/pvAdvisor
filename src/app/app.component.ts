@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
   animations: [toolbarAnimation],
 })
 export class AppComponent {
-  title = 'harley';
+  title = 'pvAdvisor';
   toolbarState = 'top';
   firmenmail = 'mail.de';
   width: number = 0;

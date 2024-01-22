@@ -1,5 +1,5 @@
 {
-  "name": "harley",
+  "name": "pvAdvisor",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run harley:serve-ssr",
-    "serve:ssr": "node dist/harley/server/main.js",
-    "build:ssr": "ng build && ng run harley:server",
-    "prerender": "ng run harley:prerender"
+    "dev:ssr": "ng run pvAdvisor:serve-ssr",
+    "serve:ssr": "node dist/pvAdvisor/server/main.js",
+    "build:ssr": "ng build && ng run pvAdvisor:server",
+    "prerender": "ng run pvAdvisor:prerender"
   },
   "private": true,
   "dependencies": {
