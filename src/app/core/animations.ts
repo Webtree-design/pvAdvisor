@@ -12,14 +12,14 @@ export const toolbarAnimation = trigger('toolbar', [
     'top',
     style({
       background: 'transparent', // Initial background color when at the top
-      color: '#DADCE0',
+      color: '#222222',
     })
   ),
   state(
     'scrolled',
     style({
-      background: '#303134', // Background color when scrolled
-      color: '#DADCE0',
+      background: '#e9e9e9', // Background color when scrolled
+      color: '#527853',
     })
   ),
   transition('top => scrolled', animate('0.5s ease-in-out')), // Easy in transition

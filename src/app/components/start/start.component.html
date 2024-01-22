@@ -6,36 +6,238 @@
       class="relative overflow-hidden bg-no-repeat bg-cover"
       style="
         background-position: 50% 50%;
-        background-image: url('../../../assets/harley.png');
+        background-image: url('../../../assets/bilder/photovoltaic-system-2742302_1280.jpg');
         height: 75vh;
       "
     >
       <div class="flex flex-col h-[75vh] max-w-screen-xl mx-auto">
-        <div class="flex justify-center items-center flex-grow">
+        <div class="flex justify-end items-end flex-grow">
           <div
-            class="rounded-lg text-center px-6 py-6 opacity-80 max-w-[800px]"
+            class="rounded-lg text-center px-6 py-6 xl:mr-6 mb-[10vh] opacity-100 max-w-[800px]"
             style="background-color: var(--accent)"
           >
-            <h1 class="text-4xl font-bold">pvAdvisor Fahrer!</h1>
-            <p class="text-xl font-medium">leben im Kunstwerk der Straße</p>
+            <h1 class="text-4xl font-bold">
+              Ihr PV Betater- nicht schlecht und aber gut!
+            </h1>
           </div>
         </div>
-        <!-- <div class="svg flex justify-center items-end my-6">
-          <svg
-            class="cursor-pointer"
-            (click)="scroll(start)"
-            xmlns="http://www.w3.org/2000/svg"
-            height="120"
-            viewBox="0 -960 960 960"
-            width="120"
-          >
-            <path
-              d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z"
-            />
-          </svg>
-        </div> -->
       </div>
       >
     </div>
   </section>
+</div>
+<div class="flex flex-col gap-12 my-12">
+  <section class="mx-auto max-w-screen-xl text-center px-6">
+    <h1 class="text-3xl md:text-3xl xl:text-3xl tracking-tight">
+      Wir bringen Ihre Ideen zum Wachsen
+    </h1>
+    <div class="flex justify-center">
+      <div class="">
+        <p class="text-gray-500">
+          Unser Unternehmen steht für lokal verankerten, preiswerten Service mit
+          Leidenschaft. Wir sind stolz darauf, Ihnen maßgeschneiderte Lösungen
+          anzubieten, die Ihre Bedürfnisse erfüllen und Ihr Unternehmen
+          erfolgreich machen. Vertrauen Sie auf unser engagiertes Team, das mit
+          Hingabe und Fachkenntnis arbeitet, um Ihnen den bestmöglichen Service
+          zu bieten.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <mat-divider
+    style="display: flex; margin: auto"
+    class="w-1/2 mx-auto max-w-screen-xl"
+  ></mat-divider>
+
+  <div class="mx-auto max-w-screen-xl">
+    <section class="text-gray-800 px-6">
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="tp-wrapper">
+          <div
+            class="tp-box bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+            (click)="toggleFlipOne()"
+            [@flipState]="flipOne"
+          >
+            <div
+              class="tp-box__side tp-box__front rounded-lg p-4 swipe-icon"
+              style="
+                background-image: url('../../../assets/bilder/solar\ 1.png');
+                background-size: cover;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M320-160q-117 0-198.5-81.5T40-440q0-107 70.5-186.5T287-718l-63-66 56-56 160 160-160 160-56-57 59-59q-71 14-117 69t-46 127q0 83 58.5 141.5T320-240h120v80H320Zm200-360v-280h360v280H520Zm0 360v-280h360v280H520Zm80-80h200v-120H600v120Z"
+                />
+              </svg>
+            </div>
+
+            <div
+              class="tp-box__side tp-box__back p-4 rounded-lg"
+              style="position: relative"
+            >
+              <div
+                class="mirror-background"
+                style="
+                  border-radius: 10px;
+                  background-image: url('../../../assets/bilder/man-5680696_1280.jpg');
+                "
+              ></div>
+              <div class="rounded-lg background-overlay"></div>
+              <p class="font-bold text-black" style="font-size: 16px">
+                Konzept
+              </p>
+              <p>
+                Wir arbeiten anfangs mit einer groben Skizze der Website, die
+                bald entsehen soll.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tp-wrapper">
+          <div
+            class="tp-box bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+            (click)="toggleFlipTwo()"
+            [@flipState]="flipTwo"
+          >
+            <div
+              class="tp-box__side tp-box__front rounded-lg p-4 swipe-icon"
+              style="
+                background-image: url('../../../assets/bilder/solar\ 1.png');
+                background-size: cover;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M320-160q-117 0-198.5-81.5T40-440q0-107 70.5-186.5T287-718l-63-66 56-56 160 160-160 160-56-57 59-59q-71 14-117 69t-46 127q0 83 58.5 141.5T320-240h120v80H320Zm200-360v-280h360v280H520Zm0 360v-280h360v280H520Zm80-80h200v-120H600v120Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="tp-box__side tp-box__back p-4 rounded-lg"
+              style="position: relative"
+            >
+              <div
+                class="mirror-background"
+                style="
+                  border-radius: 10px;
+                  background-image: url('../../../assets/bilder/solar-ueberuns.jpg');
+                "
+              ></div>
+              <div class="rounded-lg background-overlay"></div>
+              <p class="font-bold text-black" style="font-size: 16px">
+                Entwicklung
+              </p>
+              <p>
+                Basierend auf unserem Plan erstellen wir Ihre Website mit allen
+                wichtigen Elementen.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="tp-wrapper">
+          <div
+            class="tp-box bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+            (click)="toggleFlipThree()"
+            [@flipState]="flipThree"
+          >
+            <div
+              class="tp-box__side tp-box__front rounded-lg p-4 swipe-icon"
+              style="
+                background-image: url('../../../assets/bilder/solar\ 1.png');
+                background-size: cover;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M320-160q-117 0-198.5-81.5T40-440q0-107 70.5-186.5T287-718l-63-66 56-56 160 160-160 160-56-57 59-59q-71 14-117 69t-46 127q0 83 58.5 141.5T320-240h120v80H320Zm200-360v-280h360v280H520Zm0 360v-280h360v280H520Zm80-80h200v-120H600v120Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="tp-box__side tp-box__back p-4 rounded-lg"
+              style="position: relative"
+            >
+              <div
+                class="mirror-background"
+                style="
+                  border-radius: 10px;
+                  background-image: url('../../../assets/bilder/solar\ 1.png');
+                "
+              ></div>
+              <div class="rounded-lg background-overlay"></div>
+              <p class="font-bold text-black" style="font-size: 16px">
+                Fertigstellung
+              </p>
+              <p>
+                Nach Abschluss der Entwicklung kümmern wir uns um den
+                Feinschliff, um sicherzustellen, dass Ihre Website in jeder
+                Hinsicht perfekt ist.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="mx-auto max-w-screen-xl">
+    <section class="text-gray-800 px-6">
+      <div class="flex flex-wrap">
+        <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-3">
+          <h2 class="text-2xl text-center font-bold mb-6">Ihre Website</h2>
+          <p class="mb-4">
+            Mit Leidenschaft kümmern wir uns um Ihren Online-Auftritt. Wir
+            optimieren Ihre Online-Präsenz, um das volle Potenzial auszuschöpfen
+            und Ihnen dabei zu helfee zu erreichen. Unsere professionelle
+            Beratung steht Ihnen stets zur Seite, damit Sie die richtigen
+            Entscheidungen für Ihren digitalen Erfolg treffen.
+          </p>
+          <p>
+            Mit Leidenschaft kümmern wir uns um Ihren Online-Auftritt. Wir
+            optimieren Ihre Online-Präsenz, um das volle Potenzial auszuschöpfen
+            und Ihnen dabei zu helfen, Ihre Ziele zu erreichen. Unsere
+            professionelle Beratung steht In Erfolg treffen.
+          </p>
+        </div>
+
+        <div
+          class="grow-0 shrink-0 basis-auto w-full mt-4 lg:mt-0 lg:w-6/12 lg:pl-3"
+        >
+          <h2 class="text-2xl text-center font-bold mb-6">Unser Service</h2>
+          <p class="mb-4">
+            Mit Leidenschaft kümmern wir uns um Ihren Online-Auftritt. Wir
+            optimieree Online-Präsenz, um das volle Potenzial auszuschöpfen und
+            Ihnen dabei Ziele zu erreichen. Unsere professionelle Beratung steht
+            Ihnen stets zur Seite, damit Sie die richtigen Entscheidungen für
+            Ihren digitalen Erfolg treffen.
+          </p>
+          <p>
+            Mit Leidenschaft kümmern wir uns um Ihren Onliitt. Wir optimieren
+            Ihre Online-Präsenz, um das volle Potenzial auszuschöpfen und Ihn zu
+            helfen, Ihre Ziele zu erreichen. Unsere professionelle Beratung
+            steht Ihnen stets zur Seite, damit Sie die richtigen Entscheidungen
+            für Ihren digitalen Erfolg treffen.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>

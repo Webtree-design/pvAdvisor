@@ -46,7 +46,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: var(--textcolor);
 }
 
@@ -56,15 +56,15 @@ body {
 
   // --accent: #9AC0D4;
   // --second: #28408b;
-  --accent: #5e0308;
-  --second: #7a5948;
+  --accent: #527853;
+  --second: #fdffab;
 
-  --accent-X: #5e030890;
-  --second-X: #7a594890;
+  --accent-X: #52785390;
+  --second-X: #fdffab90;
 
-  --background: rgb(32, 33, 36);
-  --toolbar: #303134;
-  --textcolor: #dadce0;
+  --background: #fafafa;
+  --toolbar: #527853;
+  --textcolor: #222222;
 }
 
 // start region scrollbar
