@@ -1,4 +1,4 @@
-<div class="w-full flex">
+<div #start class="w-full flex">
   <section
     class="w-full text-gray-800 text-center lg:text-left background-radial-gradient"
   >
@@ -10,24 +10,77 @@
         height: 100vh;
       "
     >
-      <div
-        class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-        style="background-color: rgba(0, 0, 0, 0.3)"
-      >
-        <div class="flex justify-end items-center h-full">
+      <div class="flex flex-col h-[100vh] max-w-screen-xl mx-auto">
+        <div class="flex justify-end items-end flex-grow">
           <div
-            class="text-center text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]"
+            class="rounded-lg text-center px-6 py-6 md:mr-3 opacity-80 max-w-[800px]"
+            style="background-color: var(--accent)"
           >
-            <h1 class="text-4xl font-bold opacity-80">
-              Plant your best Website!
-            </h1>
+            <h1 class="text-4xl font-bold">Harley Fahrer!</h1>
+            <p class="text-xl font-medium">leben im Kunstwerk der Straße</p>
           </div>
         </div>
+        <div class="flex justify-center items-end my-6">
+          <svg
+            class="cursor-pointer"
+            (click)="scroll(start)"
+            xmlns="http://www.w3.org/2000/svg"
+            height="120"
+            viewBox="0 -960 960 960"
+            width="120"
+          >
+            <path
+              d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z"
+            />
+          </svg>
+        </div>
       </div>
+      >
     </div>
   </section>
 </div>
 
+<section class="px-6 py-12" style="background-color: var(--background)">
+  <div
+    class="shrink-0 items-center mx-auto max-w-screen-xl flex flex-col md:flex-row"
+  >
+    <div class="basis-7/12 font-light sm:text-lg shrink-0">
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold">
+        Ihre Route für wahre Genießer!
+      </h2>
+      <p class="mb-4">
+        Herzlich willkommen beim führenden Harley-Davidson Importeur! Als Ihr
+        langfristiger Partner für unvergleichlichen Fahrspaß und stilvolle
+        Abenteuer auf zwei Rädern bieten wir nicht nur erstklassige Motorräder,
+        sondern auch eine umfassende Partnerschaft für Ihren finanziellen
+        Erfolg. Unser erfahrenes Team versteht die Bedeutung von Zuverlässigkeit
+        und Effizienz im Importgeschäft. Wir bieten klare Einblicke in komplexe
+        Aspekte und entwickeln maßgeschneiderte, strategische Ansätze, um Ihre
+        unternehmerischen Ziele zu unterstützen. Entdecken Sie die Freiheit
+        einer Harley-Davidson und vertrauen Sie einem Partner, der Ihre
+        Leidenschaft für das Fahren teilt und Ihr Streben nach finanzieller
+        Sicherheit unterstützt.
+      </p>
 
-
-
+      <p>
+        Kontaktieren Sie uns noch heute und öffnen Sie die Tür zu erstklassigen
+        Harley-Importen und nachhaltigem finanziellen Erfolg. Willkommen bei
+        Ihrem Partner auf der Straße zum Erfolg!
+      </p>
+    </div>
+    <div
+      class="basis-5/12 slicedImages grid grid-cols-2 gap-x-4 md:translate-x-[44px] mt-12 md:mt-0"
+    >
+      <img
+        class="w-5/6 rounded-lg ml-auto imgLeft"
+        src="../../../assets/harley_l.png"
+        alt="harley 1"
+      />
+      <img
+        class="w-5/6 rounded-lg mr-auto imgRight md:mt-10 mt-4"
+        src="../../../assets/harley_r.png"
+        alt="harley 2"
+      />
+    </div>
+  </div>
+</section>

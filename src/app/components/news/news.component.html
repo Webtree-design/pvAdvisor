@@ -1,10 +1,14 @@
-<div *ngFor="let item of news.reverse()">
+<section class="team px-6 py-12" style="background-color: var(--toolbar)">
+  <div *ngFor="let item of news" class="items-center mx-auto max-w-screen-xl">
     <!-- Section: Design Block -->
-    <section class="my-6 text-center md:text-left">
+    <section
+      class="my-6 text-center md:text-left rounded-lg"
+      style="background-color: var(--background)"
+    >
       <div class="flex flex-col md:flex-row">
-        <div class="mb-6 w-auto basis-auto px-3 md:mb-0">
+        <div class="mb-6 w-auto basis-auto md:mb-0">
           <div
-            class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat flex justify-center items-center"
+            class="relative overflow-hidden rounded-l-lg bg-cover bg-no-repeat flex justify-center items-center"
             data-te-ripple-init
             data-te-ripple-color="light"
           >
@@ -15,20 +19,19 @@
             />
           </div>
         </div>
-  
-        <div class="mb-6 w-full basis-auto px-3">
+
+        <div class="w-full flex flex-col basis-auto p-6">
           <h5 class="mb-3 text-lg font-bold">{{ item.title }}</h5>
-  
-          <div class="mb-6 text-neutral-500 dark:text-neutral-300">
-            Veröffentlicht am
-            <p>{{ formattedDateString(item.timestamp) }}</p>
-          </div>
-          <p class="text-neutral-500 dark:text-neutral-300">
+
+          <p class="">
             {{ item.content }}
           </p>
-          
+
+          <div class="font-thin text-xs mt-auto flex justify-end">
+            <p>Veröffentlicht am {{ formattedDateString(item.timestamp) }}</p>
+          </div>
         </div>
       </div>
     </section>
   </div>
-  
+</section>

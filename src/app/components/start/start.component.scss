@@ -1,26 +1,9 @@
-.parent {
-  position: relative;
-  width: fit-content; /* or adjust as needed */
+* {
+  color: var(--textcolor);
 }
 
-.textDiv {
-  position: absolute;
-  top: 50%; /* adjust this value to position the text vertically */
-  left: 50%; /* adjust this value to position the text horizontally */
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  width: 300px; /* or adjust as needed */
-}
 
-.textDiv h5 {
-  font-size: larger;
-  font-weight: bolder;
-  margin-bottom: 0.5rem;
-}
 
-.textDiv p {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+::ng-deep svg {
+  fill: var(--accent) !important;
 }

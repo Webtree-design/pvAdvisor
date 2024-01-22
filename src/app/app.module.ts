@@ -13,10 +13,12 @@ import { DialogModule } from '@angular/cdk/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { StartComponent } from './components/start/start.component';
 import { UeberunsComponent } from './components/ueberuns/ueberuns.component';
 import { PopupComponent } from './components/dialogs/popup/popup.component';
 import { NewsComponent } from './components/news/news.component';
+import { KontaktComponent } from './components/kontakt/kontakt.component';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { NewsComponent } from './components/news/news.component';
     StartComponent,
     UeberunsComponent,
     PopupComponent,
-    NewsComponent
+    NewsComponent,
+    KontaktComponent
   ],
   imports: [
     BrowserModule, //.withServerTransition({ appId: 'serverApp' }),

@@ -38,9 +38,6 @@ $harley-theme: mat.define-light-theme(
 @tailwind components;
 @tailwind utilities;
 
-// REMOVE
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Rubik+Glitch&display=swap');
-
 /* You can add global styles to this file, and also import other style files */
 
 html,
@@ -49,7 +46,8 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--textcolor);
 }
 
 :root {
@@ -58,20 +56,22 @@ body {
 
   // --accent: #9AC0D4;
   // --second: #28408b;
-  --accent: #28408b;
-  --second: #9ac0d4;
+  --accent: #5e0308;
+  --second: #7a5948;
 
-  --accent-X: #28408b90;
-  --second-X: #9ac0d490;
+  --accent-X: #5e030890;
+  --second-X: #7a594890;
 
-  --background: #646464;
+  --background: rgb(32, 33, 36);
+  --toolbar: #303134;
+  --textcolor: #dadce0;
 }
 
 // start region scrollbar
 /* width */
 ::-webkit-scrollbar {
   width: 7px;
-  background-color: var(--background);
+  background-color: var(--toolbar);
 }
 
 /* Track */
@@ -96,3 +96,30 @@ body {
   background: var(--accent);
 }
 // end region scrollbar
+
+@media (min-width: 1024px) {
+  .slicedImages:hover {
+    transition: var(--longTransition);
+    gap: 0;
+    img {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      transition: var(--longTransition);
+    }
+    .imgLeft {
+      border-top-right-radius: 0px 0px;
+      border-bottom-right-radius: 0px 0px;
+    }
+    .imgRight {
+      border-top-left-radius: 0px 0px;
+      border-bottom-left-radius: 0px 0px;
+    }
+  }
+}
+
+.slicedImages {
+  transition: var(--longTransition);
+  img {
+    transition: var(--longTransition);
+  }
+}

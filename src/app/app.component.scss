@@ -2,9 +2,9 @@
   // white-space: nowrap;
   li {
     a {
-      font-family: "Anton", sans-serif;
       cursor: pointer;
-      font-size: 21px;
+      font-size: 24px;
+      font-weight: bold;
       transition: 0.1s;
       font-weight: 800;
     }
@@ -13,4 +13,19 @@
 
 .router-outlet {
   background-color: var(--background);
+}
+
+.banner {
+  height: 20vh;
+  width: 100%;
+  background-position: 50% 50%;
+  background-image: url("../assets/motorcycle-459594_1920.jpg");
+  opacity: 0.8;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+* {
+  color: var(--textcolor);
 }
