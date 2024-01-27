@@ -14,7 +14,7 @@ export class DataService {
     this.setHeader();
   }
 
-  async setHeader() {
+  setHeader() {
     try {
       this.headers = new HttpHeaders({
         'Content-Type': 'application/json',
@@ -24,16 +24,17 @@ export class DataService {
     }
   }
 
-  public getNews(): Observable<any> {
+  public getNews() {
     const user = env.user;
-    return this.http.get<any>(`${env.apiURL}/newsOpen/get/:${user}`, {
+    console.log(user);
+    return this.http.post<any>(`${env.apiURL}/newsOpen/get`, {user}, {
       headers: this.headers,
     });
   }
-
-  public getMessage(): Observable<any> {
+  public getMessage() {
     const user = env.user;
-    return this.http.get<any>(`${env.apiURL}/messageOpen/get/:${user}`, {
+    console.log(user);
+    return this.http.post<any>(`${env.apiURL}/messageOpen/get`, {user}, {
       headers: this.headers,
     });
   }

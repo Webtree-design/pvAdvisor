@@ -1,0 +1,146 @@
+// .konfiguratorSection {
+//   // background-image: url(../../../assets/bilder/photovoltaic-system-2742302_1280.jpg);
+//   background: rgba(255, 255, 255, 0.821)
+//     url(../../../assets/bilder/photovoltaic-system-2742302_1280.jpg);
+// }
+
+.konfiguratorSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  min-height: 835px;
+  overflow: hidden; /* Ensure no scrollbars */
+  background: linear-gradient(
+      to right,
+      rgba(239, 249, 251, 0.5),
+      rgb(239, 249, 251, 0.5)
+    ),
+    url(../../../assets/bilder/photovoltaic-system-2742302_1280.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.konfiguratorSection::before {
+  content: "";
+  background: url(../../../assets/bilder/photovoltaic-system-2742302_1280.jpg);
+  opacity: 1; /* Adjust the opacity as needed */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+::ng-deep .mdc-radio {
+  display: none !important;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container {
+  display: none !important;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.form {
+  ::ng-deep .mdc-label {
+    padding: 0 !important;
+  }
+  mat-radio-button {
+    p {
+      background-color: var(--accent);
+      font-size: 20px;
+      transition: var(--shortTransition);
+      color: white;
+      min-width: 200px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    p:hover {
+      transition: var(--shortTransition);
+      background-color: var(--accent-X);
+    }
+    input {
+      background-color: var(--accent);
+      font-size: 20px;
+      transition: var(--shortTransition);
+      color: white;
+      min-width: 200px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    input:hover {
+      transition: var(--shortTransition);
+      background-color: var(--accent-X);
+    }
+  }
+}
+
+.form {
+  ::ng-deep .mat-mdc-radio-checked {
+    transition: var(--shortTransition);
+    border: 0.5px solid var(--second);
+    border-radius: 4px;
+  }
+}
+
+.nextButton {
+  button {
+    background-color: var(--second);
+    font-size: 20px;
+    transition: var(--shortTransition);
+    color: white;
+    min-width: 100px;
+    padding: 6px;
+    border-radius: 4px;
+  }
+  button:hover {
+    transition: var(--shortTransition);
+    background-color: var(--second-X);
+  }
+}
+
+.heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  // margin-top: 36px;
+  margin-bottom: 43px;
+}
+
+::ng-deep .mat-stepper-horizontal {
+  background-color: transparent !important;
+}
+
+// ::ng-deep .mdc-linear-progress__bar-inner {
+//   border-color: var(--accent) !important;
+// }
+
+::ng-deep .mat-mdc-input-element:focus {
+  outline-color: var(--second-X) !important;
+}
+
+::ng-deep .mdc-checkbox--selected {
+  background-color: var(--second) !important;
+}
+
+.box-agb {
+  transition: var(--shortTransition);
+  color: var(--accent);
+}
+.box-agb:hover {
+  transition: var(--shortTransition);
+  color: var(--second-X);
+}

@@ -15,6 +15,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -56,7 +60,10 @@ import { KonfiguratorComponent } from './components/konfigurator/konfigurator.co
     MatStepperModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatRadioModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule
     
   ],
   providers: [],
